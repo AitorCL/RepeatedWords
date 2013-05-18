@@ -2,18 +2,18 @@ package repeatedwords;
 
 import java.util.ArrayList;
 
-public class RepeatedWords {
+public class RepeatedWordsAnalyzer {
 
     private ArrayList<String> repeatedWordsFound;
 
-    public RepeatedWords() {
+    public RepeatedWordsAnalyzer() {
         repeatedWordsFound = new ArrayList<>();
     }
 
-    public void find(String text, String text2) {
-        String[] tokens = tokenizeString(text);
+    public void findRepeatedWords(String lineOne, String lineTwo) {
+        String[] tokens = tokenizeString(lineOne);
         for (int i = 0; i < tokens.length; i++) {
-            findOcurrences(text2, tokens[i]);
+            findOcurrences(lineTwo, tokens[i]);
         }
     }
 
@@ -27,21 +27,23 @@ public class RepeatedWords {
     }
 
     public String[] tokenizeString(String text) {
-        String delims = " ";
+        String delims = "[ .,?!]+";
         String[] tokens = text.split(delims);
         return tokens;
     }
 
-    public void findOcurrences(String text2, String tokens) {
-        String line = text2;
+    public void findOcurrences(String lineTwo, String tokens) {
         int ocurrences = 0;
-        while (line.indexOf(tokens) > -1) {
-            line = line.substring(line.indexOf(tokens) + 1, line.length());
+        while (lineTwo.indexOf(tokens) > -1) {
+            lineTwo = lineTwo.substring(lineTwo.indexOf(tokens) + 1, lineTwo.length());
             ocurrences++;
         }
+        updateOcurrences(ocurrences, tokens);
+    }
+
+    public void updateOcurrences(int ocurrences, String tokens) {
         if (ocurrences > 0) {
             repeatedWordsFound.add(tokens);
         }
-        line = text2;
     }
 }

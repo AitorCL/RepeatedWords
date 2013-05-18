@@ -1,7 +1,7 @@
 
 import junit.framework.Assert;
 import org.junit.Test;
-import repeatedwords.RepeatedWords;
+import repeatedwords.RepeatedWordsAnalyzer;
 
 public class RepeatedWordsTest {
 
@@ -9,8 +9,8 @@ public class RepeatedWordsTest {
     public void acordarme_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("acordarme"));
     }
 
@@ -18,8 +18,8 @@ public class RepeatedWordsTest {
     public void de_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("de"));
     }
 
@@ -27,8 +27,8 @@ public class RepeatedWordsTest {
     public void en_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("en"));
     }
 
@@ -36,8 +36,8 @@ public class RepeatedWordsTest {
     public void lugar_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("lugar"));
     }
 
@@ -45,8 +45,8 @@ public class RepeatedWordsTest {
     public void mucho_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("mucho"));
     }
 
@@ -54,8 +54,8 @@ public class RepeatedWordsTest {
     public void no_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("no"));
     }
 
@@ -63,8 +63,8 @@ public class RepeatedWordsTest {
     public void nombre_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("nombre"));
     }
 
@@ -72,8 +72,8 @@ public class RepeatedWordsTest {
     public void tiempo_ShouldBeRepeated() {
         String text = "en un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo";
         String text2 = "ponte en mi lugar, no tengo mucho tiempo para acordarme de tu nombre";
-        RepeatedWords repeatedWords = new RepeatedWords();
-        repeatedWords.find(text, text2);
+        RepeatedWordsAnalyzer repeatedWords = new RepeatedWordsAnalyzer();
+        repeatedWords.findRepeatedWords(text, text2);
         Assert.assertEquals(true, repeatedWords.isRepeated("tiempo"));
     }
 }
